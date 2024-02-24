@@ -1,0 +1,21 @@
+#cake {
+    width: 400px;
+    height: 200px;
+    background-color: #f07167;
+    position: relative;
+  }
+  
+  .candle {
+    width: 20px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: move 3s linear infinite;
+  }
+  
+  @keyframes move {
+    0% { left: 0; }
+    100% { left: 100%; }
+  }
