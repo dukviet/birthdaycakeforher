@@ -1,10 +1,23 @@
-function createCandles() {
-    var candles = document.getElementById("candles").value;
-    var cake = document.getElementById("cake");
-    cake.innerHTML = "";
-    for (var i = 0; i < candles; i++) {
-      var candle = document.createElement("div");
-      candle.className = "candle";
-      cake.appendChild(candle);
-    }
-  }
+$(document).ready(function() {
+    $(function () {
+    var flame = $("#flame");
+    var txt = $("h1");
+
+    flame.on({
+        click: function () {
+        flame.removeClass("burn").addClass("puff");
+        $(".smoke").each(function () {
+            $(this).addClass("puff-bubble");
+        });
+        $("#glow").remove();
+        txt.hide().html("i wish you happy birthday").delay(750).fadeIn(300);
+        $("#candle").animate(
+            {
+            opacity: ".5"
+            },
+            100
+        );
+        }
+    });
+});});
+
